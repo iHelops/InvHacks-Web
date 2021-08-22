@@ -7,7 +7,7 @@ $blue_pressed: #2198dd;
 $separetor_color: #343434;
 
 body {
-    background-color: #181818;
+    background-color: #131313;
     color: white;
     font-family: 'Montserrat', sans-serif;
 }
@@ -49,19 +49,23 @@ a {
     background-color: $blue;
     font-size: 18px;
     font-weight: medium;
-    padding: 10px 26px;
+    padding: 12px 35px;
     color: white;
     border-radius: 100px;
     display: inline-block;
     user-select: none;
+    transition: all .15s;
+    position: relative;
 
     &:hover {
         background-color: $blue_hover;
         color: white;
+        text-decoration: none;
     }
 
     &:active {
         background-color: $blue_pressed;
+        transform: scale(0.95, 0.95);
     }
 }
 
@@ -84,6 +88,10 @@ a {
         padding: 20px 0;
         color: white !important;
         user-select: none;
+
+        &:hover {
+            text-decoration: none;
+        }
     }
 
     &__menu {
@@ -93,10 +101,10 @@ a {
         user-select: none;
 
         a {
-            margin-left: 13px;
+            margin-left: 8px;
             
             img {
-                width: 38px;
+                width: 34px;
             }
 
             transition: all .15s;
@@ -108,14 +116,14 @@ a {
     }
 
     &__separetor {
-        height: 30px;
+        height: 26px;
         background-color: $separetor_color;
-        width: 3px;
+        width: 2px;
     }
 
     &__loader-download {
-        width: 38px;
-        height: 38px;
+        width: 34px;
+        height: 34px;
         background-color: $blue;
         border-radius: 100px;
         margin: auto;
@@ -168,6 +176,7 @@ a {
         img {
             width: 87%;
             float: right;
+            filter: drop-shadow(0px 2px 10px rgba(0, 0, 0, 0.3));
         }
     }
 
@@ -223,6 +232,9 @@ a {
             background-color: $blue;
             border-radius: 5px;
         }
+
+        scrollbar-color: $blue $separetor_color;
+        scrollbar-width: thin;
     }
 }
 
